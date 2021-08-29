@@ -30,10 +30,15 @@ class MainActivity :
 
     private fun rollDice() {
         val dice = Dice(6) //initiates instance of the Dice class
-        val diceRoll = dice.roll() //calls the roll method, which returns a random number
-        val resultTextView: TextView =
-            findViewById(R.id.textView) //finds the view by ID and stores it in variable
-        resultTextView.text = diceRoll.toString() //changes the text to result the dice roll
+        val diceOneRoll = dice.roll() //calls the roll method, which returns a random number
+        val diceTwoRoll = dice.roll()
+        val resultTextView1: TextView =
+            findViewById(R.id.dice1) //finds the view by ID and stores it in variable
+        resultTextView1.text = "Dice #1 rolled ${diceOneRoll.toString()}" //changes the text to result the dice roll
+
+        val resultTextView2: TextView =
+            findViewById(R.id.dice2) //finds the view by ID and stores it in variable
+        resultTextView2.text = "Dice #2 rolled ${diceTwoRoll.toString()}" //changes the text to result the dice roll
     }
 
 }
